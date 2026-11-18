@@ -1,14 +1,17 @@
-// A working gta6-01 entry (Node 22, standard library only): the game is this directory's
-// game/ folder, plain static files a desktop browser loads offline (game/index.html and its ES
-// modules, no library and no network request), and the program hands it in. It copies game/ and
-// screenshots/ from beside this file to /output and writes /output/dossier.json, the summary the
-// judge reads, with the vendored make.fun library. Only the plumbing, not an open world: Block
-// Dodger, a plain 2D canvas game where a paddle dodges falling blocks and catches coins, with a
-// title screen, score, lives and levels, game over and restart, flat colours and no sound. Build
-// your own open-world crime game in its place (three.js or any library you vendor under game/),
-// put your 3 or 4 PNG or JPEG screenshots in screenshots/ (the first by name is the cover) and run it.
+// Neon Bay — an original open-world crime game, built for the make.fun
+// bounty gta6-01. This file is only the hand-in plumbing and dossier
+// writer: it copies game/ and screenshots/ from beside this file to
+// /output and writes /output/dossier.json, the summary the judge reads,
+// with the vendored make.fun library. The game itself lives in game/:
+// a 2D top-down open world (Maya Reyes, a courier drawn into Neon Bay's
+// underworld) with driving and stealing cars, traffic and pedestrians,
+// a wanted level with police chases, five story missions plus taxi fares,
+// package runs and a time trial, combat, a HUD with a live minimap,
+// start / pause / busted / wasted screens, and localStorage saves.
+// Pure JavaScript, no libraries, no network requests, all sound
+// synthesized with WebAudio.
 //
-// Serve it locally with `node serve.ts`, then open http://localhost:8080.
+// Serve it locally with `node serve.ts`, then open the address it prints.
 // Outside the grader's container, MAKEFUN_OUTPUT_DIR stands in for /output:
 //   mkdir -p out && MAKEFUN_OUTPUT_DIR=out node main.ts
 
